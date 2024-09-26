@@ -1,0 +1,20 @@
+#PROGRAMMING EXERCISE 4-4 THE DISTANCE A VEHICLE TRAVELS CAN BE CALCULATED AS FOLLOWS: DISTANCE = SPEED X TIME
+#IF A TRAIN TRAVELS 40 MILES PER HOUR FOR 3 HRS, THE DISTANCE TRAVELED IS 120 MILES. WRITE A PROGRAM THAT ASKS 
+#THE USER FOR THE SPEED OF A VEHICLE (IN MILES PER HOUR) AND THE NUMBER OF HOURS IT HAS TRAVELED.
+#IT SHOULD THEN USE A LOOP TO DISPLAY THE DISTANCE THE VEHICLE HAS TRAVELED FOR EACH HOUR OF THAT TIME PERIOD.
+#
+
+
+#ASK FOR USER THE SPEED OF VEHICLE
+speed = int(input("Please enter the speed of vehicle(mph): "))
+time = int(input("Please enter the number of hours it has traveled: "))
+
+
+#DISPLAY THE CHART
+print("\nHour\tDistance Traveled")
+print("------------------------------")
+
+# LOOP EACH HOUR
+for hour in range(1, time + 1):
+      distance = speed * hour #CALC DISTANCE
+      print(f"{hour}\t{distance:.2f}")

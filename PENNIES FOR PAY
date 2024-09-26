@@ -1,0 +1,29 @@
+#WRITE A PROGRAM THAT CALCULATES THE AMOUNT OF MONEY A PERSON WOULD EARN OVER A PERIOD OF TIME IF THEIR SALARY
+# IS ONE PENNY THE FIRST DAY, 2 PENNIES THE SECOND, AND CONTINUES TO DOUBLE EACH DAY. THE PROGRAM SHOULD ASK
+#THE USER FOR THE NUMBER OF DAYS. DISPLAY A TABLE SHOWING WHAT THE SALARY WAS FOR EACH DAY, THEN SHOW THE TOTAL
+#PAY AT THE END OF THE PERIOD. THE OUTPUT SHOULD BE DISPLAYED IN A DOLLAR AMOUNT, NOT THE NUMBER OF PENNIES.
+
+# GET USER INPUT
+days = int(input("Enter the number of days: "))
+
+# INTIIALIZE SALARY AND TOTAL PAY 
+salary = 0.01  # (1 penny is 0.01 dollars)
+total_pay = 0.0
+
+# DISPLAY TABLE
+print("\nDay        Salary")
+print("--------------------")
+
+# LOOP EACH DAY IN RANGE
+for day in range(1, days + 1):
+    # DISPLAY SALARY FOR DAY
+    print(f"{day:<10} ${salary:,.2f}")
+    
+    # ADD SALARY FOR THE CURRENT DAY TO TOTAL PAY
+    total_pay += salary
+    
+    # DOUBLE SALARY
+    salary *= 2
+
+# Display the total pay at the end of the period
+print("\nTotal pay after", days, "days is: ${:,.2f}".format(total_pay))

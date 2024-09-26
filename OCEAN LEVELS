@@ -1,0 +1,9 @@
+#ASSUMING THE OCEAN'S LEVEL IS CURRENTLY RISING AT ABOUT 1.6 MILLIMETERS PER YEAR, CREATE AN 
+#APPLICATION THAT DISPLAYS THE NUMBER OF MILLIMETERS THAT THE OCEAN HAS RISEN EACH YEAR FOR THE NEXT 25 YEARS
+
+sea_level_rise = 1.6  # establish the sea level rate rise
+
+# Create loop to calculate and display ocean level rise for the next 25 years
+for year in range(1, 26):  # loop for the next 25 years
+    total_risen = sea_level_rise * year
+    print(f"The ocean has risen {total_risen:.2f} millimeters in {year} years. ")

@@ -1,0 +1,22 @@
+#WRITE A PROGRAM WITH A LOOP THAT ASKS THE USER TO ENTER A SERIES OF POSTIVE NUMBERS. THE USER SHOULD
+#ENTER NEGATIVE NUMBER TO SIGNAL THE END OF THE SERIES. AFTER ALL THE POSITIVE NUMBERS HAVE BEEN ENTERED,
+#THE PROGRAM SHOULD DISPLAY THEIR SUM.
+
+
+# INTITALIZE VARIABLE TO 0
+total_sum = 0
+
+# START LOOP WITH USER INPUT
+while True:
+    # ASK USER FOR INPUT
+    user_input = int(input("Please enter a positive number (or a negative number to end): "))
+    
+    # THE USER SHOULD ENTER NEGATIVE NUMBER TO SIGNAL THE END OF THE SERIES
+    if user_input < 0:
+        break  # BREAK LOOP
+    
+    # ADD POSITIVE NUMBERS TOTAL COUNT
+    total_sum += user_input
+
+# DISPLAY THE TOTAL SUM
+print(f"The sum of the positive numbers entered is: {total_sum}")

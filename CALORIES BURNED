@@ -1,0 +1,19 @@
+#PROGRAMMING EXERCISE 4-2
+#RUNNING ON A PARTICULAR TREADMILL BURNS 4.2 CAL PER MIN. WRITE A PROGRAM THAT USES A LOOP TO DISPLAY THE #
+# OF CAL BURNED AFTER 10, 15, 20, 25, AND 30 MIN
+
+#INTIALIZE VARIABLES
+caloriesPerMinute = 4.2
+
+#DECLARE VARIABLES FOR THE CALORIES BURNED AND NUMBER OF MINUTES
+caloriesBurned = 0.0
+minutes = 0
+
+print ('minutes\t\tcalories burned')
+
+#EXECUTE LOOP
+for minutes in range (10,31, 5):
+      caloriesBurned = caloriesPerMinute * minutes
+      print (minutes, "\t\t", caloriesBurned)
+
+

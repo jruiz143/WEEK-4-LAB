@@ -1,0 +1,32 @@
+#PROGRAMMING EXERCISE 4-3
+#WRITE A PROGRAM THAT ASKS THE USER TO ENTER THE AMOUNT THEY HAVE BUDGETED FOR A MONTH. A LOOP SHOULD THEN PROMPT
+#THE USER TO ENTER EACH OF THEIR EXPENSES FOR THE MONTH AND KEEP RUNNING TOTAL. WHEN THE LOOP FINISHES,
+#PROGRAM SHOULD DISPLAY THE AMOUNT THE USER IS OVER OR UNDER BUDGET
+
+#ESTABLISH VARIABLES
+budget= 0.0
+difference = 0.0
+spent = 1.0
+total = 0.0
+
+#GET BUDGET INPUT
+budget = float(input("Enter the amount budgeted for the month:"))
+
+#GET TOTAL AMOUNT
+
+while spent !=0:
+      spent = float(input ('Enter an amount spent (0 to quit)'))
+      total += spent #CALCULATE TOTAL
+print (f"Budgeted ${budget: .2f}")
+print (f"Spent: ${total: ,.2f}")
+
+if budget > total:
+      difference = budget - total
+      print (f'You are ${difference: .2f}'
+             f'under budget. WELL DONE!')
+elif budget < total:
+      difference = total-budget
+      print (f"You are ${difference:, .2f}"
+             f"over budget. PLAN BETTER NEXT TIME!")
+else:
+      print ("Spending matches budget! GOOD PLANNING!")
